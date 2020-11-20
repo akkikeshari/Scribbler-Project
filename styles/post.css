@@ -1,0 +1,64 @@
+.jimi{
+    font-family: 'Marck Script', cursive;
+    margin-left: 4%;
+    font-size: 30px;
+}
+.edit{
+    float : right;
+    margin-right: 4%;
+    width: 6%;
+    background-color: #F90060;
+    color: white;
+    font-weight: bold;
+    margin-top: 0.2%;
+    font-size: 20px;
+    box-shadow: 2px 0px 2px 0px black;
+}
+
+.save{
+    float : right;
+    margin-right: 4%;
+    width: 6%;
+    background-color: #F90060;
+    color: white;
+    font-weight: bold;
+    margin-top: 0.2%;
+    font-size: 20px;
+    box-shadow: 2px 0px 2px 0px black;
+}
+
+#maintext{
+    margin : 1% 4%;
+    text-align: justify;
+}
+
+
+button{
+    background-color:  #F90060;
+    padding: 4px 10px;
+    color: white;
+    margin: 10px;
+}
+
+.likearea{
+    margin-left: 4%;
+}
+
+.likeBlogButton{
+    margin-bottom: 15px;
+}
+
+.text-area{
+    width: 50%;
+}
+#addEventNames{
+    background-color: gray;
+    color: white;
+    width: 50%;
+}
+
+#myTextArea{
+    margin-top: 2%;
+    width: 96%;
+    margin-bottom: 2%;
+}

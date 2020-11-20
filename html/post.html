@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../styles/font.css">
+    <link type="text/css" rel="stylesheet" href="../styles/post.css">
+    <link type="text/css" rel="stylesheet" href="../styles/header.css">
+    <script src="../scripts/post.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="maindiv">
+    <div class="header">
+        <button class="topButtons" data-toggle="modal" data-target="#exampleModalSignUp" id="sign-up-button">Sign Up</button>
+        <button class="topButtons" data-toggle="modal" data-target="#exampleModal" id="sign-in-button">Sign In</button>
+        <p class="logo-title">ScriBBler</p>
+        <p class="headText">Explore Imagine Create</p>
+    </div>
+    <div>
+        <h2 class="text-center">The legacy of Jimi Hendrix</h2>
+        <div><span class="jimi">Jimi</span><button class="edit" id='edit' onclick="editClicked()">Edit
+            <span>
+                <i class="fa fa-edit" style="font-size:20px;"></i>
+            </span>
+        </button>
+        <button class="save" id='save' onclick="saveClicked()" style="display: none;">Save
+            <span>
+                <i class="fa fa-save" style="font-size:20px;"></i>
+            </span>
+        </button>
+    </div>
+    </div>
+    <div id="maintext">Jimi Hendrix was arguably the greatest instrumentalist in the history of rock music. Hendrix expanded the range and vocabulary of the electric guitar into areas no musician had ever ventured before. His boundless drive, technical ability and creative application of such effects as distortion forever transformed the sound of rock and roll.
+        While creating his unique musical voice and guitar style, Hendrix synthesized diverse genres, including blues, R&B, soul, British rock, American folk music , 1950s rock and roll, psychedelic and jazz. Hendrix favored overdriven amplifiers with high volume and gain.[ 119] He was instrumental in developing the previously undesirable technique of guitar amplifier feedback, and helped to popularize 
+        use of the wah-wah pedal mainstream rock.[348] He rejected the standard barre chord fretting technique used by most guitarist in favour of frettin the low 6th string root notes with his thumb . He applied this technique during the beggning bars of "Little Wing", which allowed him to sustain the root note of chords while also playing melody. This method has been described as pio=ano style, with
+        the thumb playing what a painist's left hand would play and the other fingers playing melody as a right hand. Having spent several years fronting a trio, he developed an ability to play rhythm chords and lead lines together, giving the audio impression that more than one guitarist was performing. He was the first artist to incorporate stereophonic phasing effects in rock music recordings. Holly
+        George-Warren of Rolling Stone commented : "Hendrix pioneered the use of the instrument as an electronic sound source. Players before him had experimented eith the feedback and distortion, but Hendrix turned those effects and others into a controlled, fluid vocabulary every bit as personal ans the blues with which he began. Aledort wrote : "In rock guitar, there are but two eras - before Hendrix and after Hendrix".</div>
+    <div class="likearea">
+        <textarea id="myTextArea" style="display: none;" rows="15"></textarea>
+    <div class="likeBlogButton">    
+        <button  id= "likeBlog" onclick="postLiked()"><i class="fa fa-thumbs-up"></i>Like</button><br/>
+        <span id="commentCount">Be the first one to like this!</span>
+      </div>
+      <textarea class ='text-area' type="textarea" placeholder="Leave your comments" id="userComments" value=""></textarea><br/>
+        <button id="addList" onclick="addComments(userComments)">Comments</button>
+        <div id="addEventNames"></div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Welcome Back !</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Username</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%;">Sign In</button><br/><br/>
+                <div class="form-group text-center">
+                    <label class="form-check-label for="exampleCheck1">Not a memeber ? <span style="color:blue" data-toggle="modal" data-target="#exampleModalSignUp" id="sign-up-button"> Sign Up</span></label>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Get Started</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputName1">Full Name</label>
+                  <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Enter Full Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputUserName1">Username</label>
+                  <input type="text" class="form-control" id="exampleInputUserName1" aria-describedby="emailHelp" placeholder="Enter Username" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder=" Enter Password" required>
+                </div>
+                 <div class="form-group">
+                  <label for="exampleInputPassword2">Confirm Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-success" style="width: 100%;">Sign Up</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    </body>
+    </body>
+    </html>

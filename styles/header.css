@@ -1,0 +1,21 @@
+.topButtons{
+    float: right;
+    background-color : #5B00FF;
+    color : white;
+    font-weight : bold;
+    padding: 0.5%;
+    margin-top: 5px;
+    margin-right: 1%;
+}
+
+.logo-title{
+    font-family: 'Satisfy', cursive;
+    color : #4000B5;
+    font-size : 45px;
+    margin-left: 2%;
+}
+.headText{
+     font-family: 'Marck Script', cursive;
+     font-size : 15px;
+     margin-left: 2%;
+}
